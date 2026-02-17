@@ -1,0 +1,14 @@
+# Cloudflare Pages Configuration
+# wrangler.toml
+
+name = "it-support-kb"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = ".next"
+
+[vars]
+NEXTAUTH_URL = "https://your-project.pages.dev"
+
+# Environment variables to set in Cloudflare Dashboard:
+# DATABASE_URL = postgresql://...@neon.tech/...
+# ADMIN_PASSWORD = your-secure-password
+# NEXTAUTH_SECRET = random-secret-key
