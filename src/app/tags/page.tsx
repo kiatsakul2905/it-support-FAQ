@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 async function getTags() {
   try {
     const baseUrl = process.env.NEXTAUTH_URL || 'https://it-support-faq.vercel.app'
-    const res = await fetch(`${baseUrl}/api/tags`, { cache: 'no-store' })
+    const res = await fetch(`/api/tags`, { cache: 'no-store' })
     const data = await res.json()
     return data.tags || []
   } catch {

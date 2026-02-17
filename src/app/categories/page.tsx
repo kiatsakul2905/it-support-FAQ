@@ -9,7 +9,7 @@ const ICON_MAP: Record<string, string> = {
 async function getCategories() {
   try {
     const baseUrl = process.env.NEXTAUTH_URL || 'https://it-support-faq.vercel.app'
-    const res = await fetch(`${baseUrl}/api/categories`, { cache: 'no-store' })
+    const res = await fetch(`/api/categories`, { cache: 'no-store' })
     const data = await res.json()
     return data.categories || []
   } catch {

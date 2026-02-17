@@ -9,9 +9,9 @@ async function getHomeData() {
     const baseUrl = process.env.NEXTAUTH_URL || 'https://it-support-faq.vercel.app'
 
     const [problemsRes, categoriesRes, tagsRes] = await Promise.all([
-      fetch(`${baseUrl}/api/problems?sort=latest&limit=6`, { cache: 'no-store' }),
-      fetch(`${baseUrl}/api/categories`, { cache: 'no-store' }),
-      fetch(`${baseUrl}/api/tags`, { cache: 'no-store' }),
+      fetch(`/api/problems?sort=latest&limit=6`, { cache: 'no-store' }),
+      fetch(`/api/categories`, { cache: 'no-store' }),
+      fetch(`/api/tags`, { cache: 'no-store' }),
     ])
 
     const problemsData = await problemsRes.json()
