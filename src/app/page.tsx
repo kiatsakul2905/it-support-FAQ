@@ -6,7 +6,7 @@ import ProblemCard from '@/components/ProblemCard'
 
 async function getHomeData() {
   try {
-    const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'
+    const baseUrl = process.env.NEXTAUTH_URL || 'https://it-support-faq.vercel.app'
 
     const [problemsRes, categoriesRes, tagsRes] = await Promise.all([
       fetch(`${baseUrl}/api/problems?sort=latest&limit=6`, { cache: 'no-store' }),
